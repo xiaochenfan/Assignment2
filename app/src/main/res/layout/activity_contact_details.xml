@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_contact_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.chenfanxiao.assignment2.ContactDetails">
+
+    <TextView
+        android:text="Name:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Title"
+        android:layout_alignParentStart="true"
+        android:id="@+id/text_Name"
+        android:labelFor="@+id/Display_Name"
+       />
+
+    <TextView
+        android:text="Contact Details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+
+        android:id="@+id/Title"
+        android:textStyle="normal|bold" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/Display_Name"
+        tools:style="@style/Widget.AppCompat.EditText"
+        android:layout_below="@+id/text_Name"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+       />
+
+    <TextView
+        android:text="Phone Number:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_PhoneNumber"
+        android:labelFor="@+id/Display_PhoneNumber"
+        android:layout_below="@+id/Display_Name"
+        android:layout_alignParentStart="true"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/Display_PhoneNumber"
+        tools:style="@style/Widget.AppCompat.EditText"
+        android:layout_below="@+id/text_PhoneNumber"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+       />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ListView_Details"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView3"
+        android:layout_above="@+id/button" />
+
+    <TextView
+        android:text="Relationship:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Display_PhoneNumber"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textView3"/>
+
+    <Button
+        android:text="Add Person"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:elevation="0dp"
+        android:onClick="addPersonOnClick"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
